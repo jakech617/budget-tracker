@@ -6,12 +6,12 @@ const FILES_TO_CACHE = [
     "/index.html", 
     "/index.js", 
     "/db.js", 
-    "style.css"
+    "/styles.css"
 ];
 
 self.addEventListener("install", function (evt) {
   evt.waitUntil(
-    caches.open(DATA_CACHE_NAME).then((cache) => cache.add("/api/images"))
+    caches.open(DATA_CACHE_NAME).then((cache) => cache.add("/api/transaction"))
   );
 
   evt.waitUntil(
